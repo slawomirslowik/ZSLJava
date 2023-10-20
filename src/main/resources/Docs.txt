@@ -1,0 +1,6 @@
+-----   GIT
+
+git init    -> tworzymy repo
+git add .   -> dodajemy nowe / zmienione pliki
+git commit  -> zapisujemy zmiany
+git push    -> wysylamy zapisane commity do repozytorium zdalnego
