@@ -20,4 +20,6 @@ public class Owner {
         Food smaczek = new Food("smaczek", 5000);
         dog.feed(smaczek);
     }
+
+
 }
