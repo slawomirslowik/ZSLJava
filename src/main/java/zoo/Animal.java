@@ -1,5 +1,7 @@
 package zoo;
 
+import java.util.List;
+
 public class Animal {
     String specie;
     char gender;
@@ -34,10 +36,10 @@ public class Animal {
 
     // sout  - > skrót do System
     public void feed(Food food) {
-        if (food.foodType.equals("trutka")) {
-            System.out.println("Zeżarłem trutkę. Umieram sobie.");
-            isAlive = false;
-        }
+//        if (food.foodType.equals("trutka")) {
+//            System.out.println("Zeżarłem trutkę. Umieram sobie.");
+//            isAlive = false;
+//        }
 
         /*
          ! - operator negacji - odwraca zmienną logiczną
@@ -51,5 +53,25 @@ public class Animal {
             caloriesCounter += food.calories;
             System.out.println("Dziś zjadłem " + caloriesCounter + " kalorii.");
         }
+    }
+
+    public void feed(List<Food> foods) {
+        for (Food f : foods) {
+            if (isPoison(f)) {
+                System.out.println("Fuj, sam to zjedz!");
+            } else {
+                feed(f);
+            }
+        }
+    }
+
+    /**
+     * Check if given food is poisonous
+     *
+     * @param food - Food instance
+     * @return True if given food is poison
+     */
+    private static boolean isPoison(Food food) {
+        return food.foodType.equals("trutka");
     }
 }

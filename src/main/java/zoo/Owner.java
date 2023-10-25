@@ -24,23 +24,17 @@ public class Owner {
         // streamy  ->                     lambdy
 //        jedzonko.stream().forEach(s -> dog.feed(s));
 
-        for (Food food : jedzonko) {
-            if (isPoison(food)) {
-                System.out.println("Fuj, sam to zjedz!");
-            } else {
-                dog.feed(food);
-            }
-        }
+//        for (Food food : jedzonko) {
+//            if (isPoison(food)) {
+//                System.out.println("Fuj, sam to zjedz!");
+//            } else {
+//                dog.feed(food);
+//            }
+//        }
+
+        dog.feed(jedzonko);
     }
 
-    /**
-     * Check if given food is poisonous
-     *
-     * @param food - Food instance
-     * @return True if given food is poison
-     */
-    private static boolean isPoison(Food food) {
-        return food.foodType.equals("trutka");
-    }
+
 
 }
