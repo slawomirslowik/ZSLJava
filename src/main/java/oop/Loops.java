@@ -1,8 +1,15 @@
 package oop;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Loops {
 
     static String[] tablica;
+
+    static List<String> lista = new ArrayList<>();
+    static List<String> lista2 = Arrays.asList("aa","bb");
 
     //psvm -> public static void main(String[] args) {
     public static void main(String[] args) {
@@ -14,6 +21,8 @@ public class Loops {
         tablica[1] = str2;
         tablica[2] = str3;
 
+
+
         // pętla for(each) -> iteracja po wszystkich elementach zbioru
 //        for (String s : tablica) {
 //        // sout ->  System.out.println
@@ -23,7 +32,6 @@ public class Loops {
         for (int counter = 1; counter <= 10 ; counter++) {
             System.out.println("wow! " + counter);
         }
-
 
         int counter = 1;
         while (counter <= 10) {
