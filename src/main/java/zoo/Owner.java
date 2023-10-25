@@ -9,15 +9,17 @@ public class Owner {
 //        dog.feed("jedzenie", 2);
 
         Food paroowa = new Food("parówka", 50000);
-        dog.feed(paroowa);
-
         Food trutka = new Food("trutka", 50000);
-        dog.feed(trutka);
-
         Food marchewa = new Food("marchewka", 10000);
-        dog.feed(marchewa);
-
         Food smaczek = new Food("smaczek", 5000);
+
+
+
+
+
+        dog.feed(paroowa);
+        dog.feed(trutka);
+        dog.feed(marchewa);
         dog.feed(smaczek);
     }
 
