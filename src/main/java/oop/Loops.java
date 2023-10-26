@@ -6,14 +6,11 @@ import java.util.List;
 
 public class Loops {
 
-    static String[] tablica;
-
-    static List<String> lista = new ArrayList<>();
-    static List<String> lista2 = Arrays.asList("aa","bb");
+    static String[] tablica;    // deklaracja zmiennej
 
     //psvm -> public static void main(String[] args) {
     public static void main(String[] args) {
-        tablica = new String[3];
+        tablica = new String[3];   // inicjalizacja zmiennej zadeklarowanej w linii 9
         String str1 = "Ala ";
         String str2 = "ma ";
         String str3 = "kota";
@@ -21,25 +18,37 @@ public class Loops {
         tablica[1] = str2;
         tablica[2] = str3;
 
-
-
-        // pętla for(each) -> iteracja po wszystkich elementach zbioru
-        for (String s : tablica) {
-        // sout ->  System.out.println
-            System.out.println(s);
-        }
-
-        for (int counter = 1; counter <= 10 ; counter++) {
-            System.out.println("wow! " + counter);
-        }
-
+/*
         // pętla while -> wykonywana dopóki warunek = true
         int counter = 1;
-               // warunek -> counter <= 10
-        while (counter <= 10) {
+        // warunek -> counter <= 10
+        while (counter < 10) {
             System.out.println("help! " + counter);
             counter++;  // inkrementacja -> ++ oznacza dodanie 1
             // counter++ oznacza to samo co: counter = counter + 1;
+            // counter--; -> dekrementacja
         }
+
+          dopóki (warunek jest prawdziwy) {
+            wykonuj kod;
+        }
+
+    */
+
+        // pętla for
+        //   inicjalizacja ; weryfikacja ; aktualizacja
+        for (int count = 1;  count <= 10 ; count++) {
+            System.out.println("wow! " + count);
+        }
+
+        // pętla for(each) -> iteracja po wszystkich elementach zbioru
+        for (String s : tablica) {
+            // sout ->  System.out.println
+            System.out.println(s);
+        }
+
+        //streamy
+
+        Arrays.stream(tablica).forEach(s -> System.out.println(s));
     }
 }
