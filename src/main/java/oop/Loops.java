@@ -24,22 +24,22 @@ public class Loops {
 
 
         // pętla for(each) -> iteracja po wszystkich elementach zbioru
-//        for (String s : tablica) {
-//        // sout ->  System.out.println
-//            System.out.println(s);
-//        }
+        for (String s : tablica) {
+        // sout ->  System.out.println
+            System.out.println(s);
+        }
 
         for (int counter = 1; counter <= 10 ; counter++) {
             System.out.println("wow! " + counter);
         }
 
+        // pętla while -> wykonywana dopóki warunek = true
         int counter = 1;
+               // warunek -> counter <= 10
         while (counter <= 10) {
             System.out.println("help! " + counter);
             counter++;  // inkrementacja -> ++ oznacza dodanie 1
             // counter++ oznacza to samo co: counter = counter + 1;
         }
     }
-
-
 }
