@@ -24,14 +24,6 @@ public class Owner {
         // streamy  ->                     lambdy
 //        jedzonko.stream().forEach(s -> dog.feed(s));
 
-//        for (Food food : jedzonko) {
-//            if (isPoison(food)) {
-//                System.out.println("Fuj, sam to zjedz!");
-//            } else {
-//                dog.feed(food);
-//            }
-//        }
-
         dog.feed(jedzonko);
     }
 
