@@ -6,8 +6,13 @@ import java.util.List;
 public class Owner {
     public static void main(String[] args) {
         Animal dog = new Animal("dog");
-        dog.setSpeed(5);
+
         dog.move(10);
+
+        dog.setSpeed(5);
+
+        dog.move(10);
+
     }
 
     private static void feedAnimal(Animal animal) {
