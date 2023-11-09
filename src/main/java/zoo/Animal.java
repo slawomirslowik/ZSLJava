@@ -9,15 +9,24 @@ public class Animal {
     boolean isAlive = true;
     boolean isHungry = true;
     int caloriestTofull;
-
     long duzaLiczba;
     float liczbaZmiennoprzecinkowa;
     double liczbaZmiennoprzecinkowaZDwomaMiejscamiPoPrzecinku;
-
     long caloriesCounter = 0L;
+    int speed;
 
     public Animal(String specie) {
         this.specie = specie;
+    }
+
+    //setter for speed field
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
+
+    public void move(int distance) {
+        double timeToReach =  (double) distance / speed;
+        System.out.println("Poruszam się. Za: [" + timeToReach + "] sekund dotrę do celu.");
     }
 
     public void speak() {

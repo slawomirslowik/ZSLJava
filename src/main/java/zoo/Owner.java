@@ -6,8 +6,12 @@ import java.util.List;
 public class Owner {
     public static void main(String[] args) {
         Animal dog = new Animal("dog");
+        dog.setSpeed(5);
+        dog.move(10);
+    }
 
-        dog.speak();
+    private static void feedAnimal(Animal animal) {
+        animal.speak();
 
         Food paroowa = new Food("parówka", 50000);
         Food trutka = new Food("trutka", 50000);
@@ -24,7 +28,7 @@ public class Owner {
         // streamy  ->                     lambdy
 //        jedzonko.stream().forEach(s -> dog.feed(s));
 
-        dog.feed(jedzonko);
+        animal.feed(jedzonko);
     }
 
 
