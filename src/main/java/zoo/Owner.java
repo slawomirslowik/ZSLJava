@@ -8,10 +8,12 @@ public class Owner {
         Animal dog = new Animal("dog");
 
         dog.move(10);
-
         dog.setSpeed(5);
+        dog.move(1000);
 
-        dog.move(10);
+        Animal polly = new Bird("papuga");
+        polly.setSpeed(100);
+        polly.move(1000);
 
     }
 
