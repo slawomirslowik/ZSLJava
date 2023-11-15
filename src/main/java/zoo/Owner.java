@@ -5,6 +5,18 @@ import java.util.List;
 
 public class Owner {
     public static void main(String[] args) {
+        Animal nemo = new Fish("błazenek");
+
+        nemo.setSpeed(20);
+        nemo.move(10);
+
+        Animal polly = new Bird("papuga");
+        polly.setSpeed(20);
+        polly.move(10);
+
+    }
+
+    private void playWithAnimal() {
         Animal dog = new Animal("dog");
 
         dog.move(10);

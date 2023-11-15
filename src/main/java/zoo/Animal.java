@@ -20,16 +20,21 @@ public class Animal {
     }
 
     //setter for speed field
+    // skrót: alt+ insert > setter > wybieramy pole (zmienną)
     public void setSpeed(int speed) {
         this.speed = speed;
     }
 
     public void move(int distance) {
         if (speed == 0) {
+
+
+
             System.out.println("Leżę i nigdzie się nie ruszam.");
         } else {
             double timeToReach = (double) distance / speed;
-            System.out.println("Poruszam się z prędkością: [" + speed +" m/s]. Za: [" + timeToReach + "] sekund dotrę do celu.");
+            System.out.println("Poruszam się z prędkością: ["
+            + speed +" m/s]. Za: [" + timeToReach + "] sekund dotrę do celu.");
         }
     }
 

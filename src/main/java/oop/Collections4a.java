@@ -23,5 +23,4 @@ public class Collections4a {
             System.out.println(l);
         }
     }
-
 }
