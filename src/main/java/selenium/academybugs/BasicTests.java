@@ -3,6 +3,8 @@ package selenium.academybugs;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+import org.testng.TestNG;
 import org.testng.annotations.Test;
 import selenium.ChromeDriverSingleton;
 
@@ -14,7 +16,8 @@ public class BasicTests {
 
     String page = "https://academybugs.com/find-bugs/";
 
-    @Test(enabled = false)
+    //@Test(enabled = false)
+    @Test
     public void openShop() {
         WebDriver chrome = ChromeDriverSingleton.getChromeDriver();
         chrome.get(page);
@@ -26,6 +29,9 @@ public class BasicTests {
         chrome.get(page);
 
         List<WebElement> pagination = chrome.findElements(By.xpath("//a[@class='what-we-offer-pagination-link']"));
-        pagination.get(0).click();
+
+        for (WebElement e : pagination) {
+            e.click();
+        }
     }
 }
