@@ -3,8 +3,6 @@ package selenium.academybugs;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
-import org.testng.TestNG;
 import org.testng.annotations.Test;
 import selenium.ChromeDriverSingleton;
 
