@@ -18,4 +18,8 @@ public class ChromeDriverSingleton {
             return instance;
         }
     }
+
+    private static String welcomeMyFriend() {
+        return "Hello my friend!";
+    }
 }

@@ -1,4 +1,4 @@
-package selenium.ShopTests;
+package selenium.academybugs;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -12,19 +12,18 @@ import java.util.List;
 // then press Enter. You can now see whitespace characters in your code.
 public class BasicTests {
 
-    private static String welcomeMyFriend() {
-        return "Hello my friend!";
-    }
+    String page = "https://academybugs.com/find-bugs/";
+
     @Test(enabled = false)
     public void openShop() {
         WebDriver chrome = ChromeDriverSingleton.getChromeDriver();
-        chrome.get("https://academybugs.com/find-bugs/");
+        chrome.get(page);
     }
 
     @Test
     public void getItems() {
         WebDriver chrome = ChromeDriverSingleton.getChromeDriver();
-        chrome.get("https://academybugs.com/find-bugs/");
+        chrome.get(page);
 
         List<WebElement> pagination = chrome.findElements(By.xpath("//a[@class='what-we-offer-pagination-link']"));
         pagination.get(0).click();
