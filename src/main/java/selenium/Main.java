@@ -11,7 +11,11 @@ public class Main {
         System.out.println(welcomeMyFriend());
 
         ChromeOptions options = new ChromeOptions();
-        WebDriver audiQ7 = new ChromeDriver(options);
+        WebDriver driver = new ChromeDriver(options);
+
+        driver.get("https://automationintesting.online/");
+        driver.manage().window().maximize();
+
     }
 
     private static String welcomeMyFriend() {

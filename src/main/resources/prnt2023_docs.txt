@@ -1,0 +1,11 @@
+-----   GIT
+
+git init    -> tworzymy repo
+git add .   -> dodajemy nowe / zmienione pliki
+git commit  -> zapisujemy zmiany
+git push    -> wysylamy zapisane commity do repozytorium zdalnego
+git status  -> pokazuje biezace zmiany (pliki na czerwono)
+
+
+----- chromedriver
+https://googlechromelabs.github.io/chrome-for-testing/#stable
