@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-public class ChromeDriverSingleton {
+public class WebDriverSingleton {
 
     static WebDriver instance = null;
 
@@ -17,9 +17,5 @@ public class ChromeDriverSingleton {
         } else {
             return instance;
         }
-    }
-
-    private static String welcomeMyFriend() {
-        return "Hello my friend!";
     }
 }
