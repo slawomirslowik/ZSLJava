@@ -1,6 +1,7 @@
 package selenium;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 public abstract class TestTemplate {
@@ -9,7 +10,13 @@ public abstract class TestTemplate {
     public String page;
 
     @BeforeClass
-    public void testSetUp() {
+    public void setUp() {
         driver = WebDriverSingleton.getChromeDriver();
+    }
+
+    @AfterClass
+    public void tearDown() {
+        driver.close();
+        driver.quit();
     }
 }

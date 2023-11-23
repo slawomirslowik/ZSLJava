@@ -23,7 +23,6 @@ public class Collections4a {
     }
 
     public static void useMap() {
-
         //    key  , value
         Map<Integer, String> map = new HashMap<>();
 

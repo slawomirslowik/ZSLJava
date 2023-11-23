@@ -3,6 +3,7 @@ package selenium.academybugs;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -16,29 +17,31 @@ import java.util.List;
 public class BasicTests extends TestTemplate {
 
     @BeforeClass
-    public void setUp() {
+    public void initPage() {
         page = "https://academybugs.com/find-bugs/";
-    }
-
-    @AfterClass
-    public void tearDown() {
-        driver.close();
-        driver.quit();
     }
 
     //@Test(enabled = false)
     @Test
     public void openShop() {
-        WebDriver chrome = WebDriverSingleton.getChromeDriver();
-        chrome.get(page);
+        driver.get(page);
+        String pageTitle = driver.getTitle();
+        Assert.assertEquals(pageTitle, "Find Bugs – AcademyBugs.com");
+    }
+
+    //@Test(enabled = false)
+    @Test()
+    public void openShopFailing() {
+        driver.get(page);
+        String pageTitle = driver.getTitle();
+        Assert.assertEquals(pageTitle, "Find Bugs – AcademyBugs.com wrong");
     }
 
     @Test
     public void getItems() {
-        WebDriver chrome = WebDriverSingleton.getChromeDriver();
-        chrome.get(page);
+        driver.get(page);
 
-        List<WebElement> pagination = chrome.findElements(By.xpath("//a[@class='what-we-offer-pagination-link']"));
+        List<WebElement> pagination = driver.findElements(By.xpath("//a[@class='what-we-offer-pagination-link']"));
 
         for (WebElement e : pagination) {
             e.click();
