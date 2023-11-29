@@ -1,0 +1,5 @@
+Zad. 1. (2) Stwórz pakiet 'workshop' i klasę 'Tool' z polem typu String 'toolType'  (2)
+Zad. 2. (3) Dodaj metodę typu void useTool( ) z logowaniem do konsoli jakiegoś komunikatu
+Zad. 3. (4) Stwórz klasę Worker, zainicjalizuj instancję klasy Tool i użyj metody useTool()
+Zad. 4. (5) Stwórz tablicę lub listę obiektów klasy Tool i wykonaj na niej pętlę for lub while, używając metody z zad 2
+Zad. 5. (6) Wrzuć stworzony kod do zdalnego repozytorium git
