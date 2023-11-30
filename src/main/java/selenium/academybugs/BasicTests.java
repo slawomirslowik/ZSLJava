@@ -42,7 +42,7 @@ public class BasicTests extends TestTemplate {
         driver.get(page);
 
         List<WebElement> pagination = driver.findElements(By.xpath("//a[@class='what-we-offer-pagination-link']"));
-        
+
         for (WebElement e : pagination) {
             e.click();
         }

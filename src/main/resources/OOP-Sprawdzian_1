@@ -1,5 +1,22 @@
-Zad. 1. (2) Stwórz pakiet 'workshop' i klasę 'Tool' z polem typu String 'toolType'  (2)
-Zad. 2. (3) Dodaj metodę typu void useTool( ) z logowaniem do konsoli jakiegoś komunikatu
-Zad. 3. (4) Stwórz klasę Worker, zainicjalizuj instancję klasy Tool i użyj metody useTool()
-Zad. 4. (5) Stwórz tablicę lub listę obiektów klasy Tool i wykonaj na niej pętlę for lub while, używając metody z zad 2
-Zad. 5. (6) Wrzuć stworzony kod do zdalnego repozytorium git
+Zad. 1. (2)
+   - Stwórz nowy Java Maven project
+   - Dodaj pakiet 'workshop'
+       - Stwórz klasę 'Tool' zawierającą:
+            - dodaj pole (zmienną) typu String 'toolType'
+            - dodaj konstruktor przyjmujacy powyzsza zmienna jako argument [left alt + insert]
+
+Zad. 2. (3)
+   - W klasie Tool dodaj metodę typu void useTool( ) z logowaniem do konsoli komunikatu z wartością zmiennej 'toolType'
+
+Zad. 3. (4)
+    - W pakiecie workshop Stwórz klasę 'Worker'
+    - Dodaj metodę main (skrót psvm)
+    - W metodzie main zainicjalizuj instancję klasy Tool i użyj na niej metody useTool()
+
+Zad. 4. (5)
+    - Stwórz tablicę lub listę obiektów klasy Tool
+    - Wykonaj na niej pętlę (for lub while), wywołując metodę useTool();
+
+Zad. 5. (6)
+    - Stwóz nowe repozytorium w gitHubie
+    - Wrzuć stworzony kod do powyższego zdalnego repozytorium
