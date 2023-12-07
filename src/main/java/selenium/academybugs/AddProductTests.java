@@ -30,7 +30,6 @@ public class AddProductTests extends TestTemplate {
         System.out.println("Accepted cookies.");
     }
 
-    //@Test(enabled = false)
     @Test
     public void addedProductsInShoppingCart() {
 
@@ -48,6 +47,20 @@ public class AddProductTests extends TestTemplate {
                 button.click();
                 System.out.println("button clicked = " + button.getAttribute("id"));
                 pause(1);
+            } else {
+                System.out.println("button not clickable = " + button.getAttribute("id"));
+            }
+        }
+    }
+
+    @Test
+    public void checkAddToCartButtons() {
+        List<WebElement> addButtons = driver.findElements(By.xpath("//span[@class='ec_product_addtocart']/a"));
+        System.out.println("addButtons = " + addButtons.size());
+
+        for (WebElement button : addButtons) {
+            if (button.isEnabled() && button.isDisplayed()) {
+            Assert.assertEquals(button.getText(), "ADD TO CART");
             } else {
                 System.out.println("button not clickable = " + button.getAttribute("id"));
             }
