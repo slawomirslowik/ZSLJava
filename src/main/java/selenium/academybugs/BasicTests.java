@@ -3,6 +3,7 @@ package selenium.academybugs;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -34,7 +35,8 @@ public class BasicTests extends TestTemplate {
     public void openShopFailing() {
         driver.get(page);
         String pageTitle = driver.getTitle();
-        Assert.assertEquals(pageTitle, "Find Bugs – AcademyBugs.com wrong");
+        Assert.assertEquals(pageTitle, "Find Bugs – AcademyBugs.com");
+        Assert.assertNotEquals(pageTitle, "Find Bugs – AcademyBugs.com wrong");
     }
 
     @Test

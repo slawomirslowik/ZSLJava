@@ -19,4 +19,18 @@ public abstract class TestTemplate {
         driver.close();
         driver.quit();
     }
+
+    /**
+     * Method pauses thread
+     *
+     * @param seconds
+     *
+     */
+    protected void pause (int seconds) {
+        try {
+            Thread.sleep(seconds * 1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
