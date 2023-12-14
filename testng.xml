@@ -3,6 +3,7 @@
     <test name="Simple Test">
         <classes>
             <class name="selenium.academybugs.BasicTests"/>
+            <class name="selenium.academybugs.AddProductTests"/>
         </classes>
     </test>
 </suite>
