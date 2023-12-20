@@ -9,6 +9,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import selenium.TestTemplate;
 
+import java.util.ArrayList;
 import java.util.List;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
@@ -65,5 +66,34 @@ public class AddProductTests extends TestTemplate {
                 System.out.println("button not clickable = " + button.getAttribute("id"));
             }
         }
+    }
+
+//    @Test(dependsOnMethods = "checkAddToCartButtons")
+    @Test
+    public void goToCartTest() {
+
+        List<WebElement> addButtons = driver.findElements(By.xpath("//span[@class='ec_product_addtocart']/a"));
+        System.out.println("addButtons = " + addButtons.size());
+
+        int counter = 0;
+        for (WebElement button : addButtons) {
+            if (button.isEnabled() && button.isDisplayed()) {
+                Assert.assertEquals(button.getText(), "ADD TO CART");
+            } else {
+                System.out.println("button not clickable = " + button.getAttribute("id"));
+            }
+            counter++;
+            if (counter >= 3) break;
+        }
+
+        WebElement cartButton = driver.findElement(By.xpath("//a[@title='View Cart']"));
+        cartButton.click();
+
+        List<WebElement> itemsTotal = driver.findElements(By.xpath("//td[@class='ec_cartitem_total']"));
+        List<String> totalPrices = new ArrayList<>();
+        for (WebElement item : itemsTotal) {
+            totalPrices.add(item.getText());
+        }
+        System.out.println(totalPrices);
     }
 }
