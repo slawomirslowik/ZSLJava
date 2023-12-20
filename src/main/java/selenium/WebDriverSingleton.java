@@ -18,4 +18,8 @@ public class WebDriverSingleton {
             return instance;
         }
     }
+
+    private boolean hasQuit() {
+        return instance.toString().contains("(null)");
+    }
 }

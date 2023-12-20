@@ -1,8 +1,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Example test run">
+<suite name="Landing page">
     <test name="Simple Test">
         <classes>
             <class name="selenium.academybugs.BasicTests"/>
+            <class name="selenium.academybugs.AddProductTests"/>
         </classes>
     </test>
 </suite>
